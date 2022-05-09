@@ -13,6 +13,11 @@ public class BookServiceImpl implements BookService {
 
 	@Autowired
 	private BookRepository bookRepo;
+	
+	@Override
+	public Book findById(int id) {
+		return bookRepo.findById(id);
+	}
 
 	@Override
 	public List<Book> allBooks() {
@@ -50,9 +55,12 @@ public class BookServiceImpl implements BookService {
 
 	@Override
 	public void deleteBookById(int id) {
-		// TODO Auto-generated method stub
-		
+		if(bookRepo.existsById(id)) {
+			bookRepo.deleteById(id);
+		}
 	}
+
+	
 	
 	
 	
