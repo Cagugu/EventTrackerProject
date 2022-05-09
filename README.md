@@ -10,20 +10,20 @@ This program was developed in Spring Tools Suite and tested using Postman. It's 
 
 ![alt text](JSON.jpg)
 
---
+
 
 ## Technologies Used
 
-  Java
-  MySQL Workbench
-  SpringBoot
-  Atom
-  GitHub
-  MySQL
-  Tomcat 8
-  MAMP
-  Google
-  Spring Tool Suite 4
-  Gradle
-  Object-Oriented Programming
-  Test Driven Development using Postman
+-  Java
+-  MySQL Workbench
+-  SpringBoot
+-  Atom
+-  GitHub
+-  MySQL
+-  Tomcat 8
+-  MAMP
+-  Google
+-  Spring Tool Suite 4
+-  Gradle
+-  Object-Oriented Programming
+-  Test Driven Development using Postman
