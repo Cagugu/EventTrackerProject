@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Book Nook</title>
+    <style>
+    table, th, td, tr{
+  border: 1px solid;
+}
+    </style>
+  </head>
+  <body>
+   <h1>Hey Reader :)</h1>
+   <div id = 'tableDiv'>
+   <table id = "bookList"></table>
+   </div>
+   
+   
+   <div id = 'createBookFormDiv'>
+   <form name = "createBookForm">
+   
+   <label for = "title">Book Title: </label><br>
+   <input type = 'text' name= 'title' required><br>
+   <label for = "authorName">Written By:</label><br>
+   <input type = 'text' name= 'authorName' required><br>
+   <label for = "description">Provide a Short Description:</label><br> 
+   <input type = 'text' name= 'description'><br>
+   <label for = "length">How many pages(hard copy or digital) or hours(audio) was it?</label><br>
+   <input type = 'text' name= 'length' required><br>
+   <label for = "genre">What genre?</label><br>
+   <input type = 'text' name= 'genre'><br>
+   <label for = "format">Did you read or listen?</label><br>
+   <input type = 'text' name= 'format'><br>
+   <label for = "rating">How would you rate it overall?</label><br>
+   <input type = 'text' name= 'rating' required><br>
+   
+   <label>Would you recommend this book to a friend?</label><br>
+   <label>Yes:</label><input type = 'checkbox' name= 'recommended' value = "1">
+   <label>No:</label><input type = 'checkbox' name= 'recommended' value = "0"><br>
+   <label for = "timeToRead">How long did it take you to finish this book?</label><br>
+   <input type = 'text' name= 'timeToRead'><br>
+   <button type = "submit" name = 'submit'>Add Review</button>
+   
+   </form>
+   </div>
+  
+    <script src="js/script.js" charset="utf-8"></script>
+  </body>
+</html>
