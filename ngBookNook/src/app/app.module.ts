@@ -10,13 +10,19 @@ import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ReviewComponent } from './components/review/review.component';
+import { BookshelfComponent } from './components/bookshelf/bookshelf.component';
+import { SingleBookComponent } from './components/single-book/single-book.component';
+import { TableFilterPipe } from './pipes/table-filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    ReviewComponent
+    ReviewComponent,
+    BookshelfComponent,
+    SingleBookComponent,
+    TableFilterPipe
   ],
   imports: [
     BrowserModule,

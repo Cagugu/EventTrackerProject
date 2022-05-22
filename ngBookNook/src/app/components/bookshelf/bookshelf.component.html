@@ -1,0 +1,11 @@
+
+<body>
+
+  <div class="container" *ngFor="let book of books; let i = index" >
+
+    <img  [src] = "book.imageURL" let bookId = "book.id" [routerLink]="['/singleBook/' + book.id]" >
+
+  </div>
+</body>
+
+

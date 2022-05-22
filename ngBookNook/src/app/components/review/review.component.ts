@@ -11,16 +11,39 @@ import { Book } from 'src/app/models/book';
 export class ReviewComponent implements OnInit {
 
   newBook: Book = new Book();
+  editBook: Book = new Book();
+
+  books: Book[] =[];
 
   constructor(private router: Router, private bookSvc: BookNookService) { }
 
   ngOnInit(): void {
   }
 
-  review(book: Book): void {
-
-    this.router.navigateByUrl('/review');
+  addReview(book: Book): void {
+  this.bookSvc.add(this.newBook).subscribe(
+    data => {
+      this.newBook = new Book();
+    },
+    err => console.log(err)
+  );
+    this.router.navigateByUrl('home');
   }
+
+  reload() {
+    this.bookSvc.index().subscribe(
+      data => this.books = data,
+      err => console.log(err)
+    );
+  }
+
+   deleteBook(id: number) {
+    this.bookSvc.destroy(id).subscribe(
+      data => this.reload(),
+      err => console.log(err)
+    );
+  }
+
 
 
 }

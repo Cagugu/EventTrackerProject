@@ -1,6 +1,24 @@
-<div class = "main">
-<!-- background will live here -->
-<h1>Home Works</h1>
+
+
+<div class="container">
+
+  <div class = "main">
+  <!-- background will live here -->
+  <h1>Home Works</h1>
+
+</div> -->
+
+
+
+<input type="text" id="myInput" [(ngModel)]="filter" placeholder="Search for names.." >
+
+<table>
+<tr *ngFor="let book of books | tableFilter: filter "></tr>
+  <td>{{book.title}}</td>
+  <td>{{book.authorName}}</td>
+  <td>{{book.genre}}</td>
+  <td>{{book.rating}}</td>
+</table>
+
 
 </div>
-

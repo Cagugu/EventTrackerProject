@@ -1,0 +1,53 @@
+
+<body>
+  background-image: url('background.jpeg')
+  <div class = "container" *ngIf="selected">
+
+    <div class="card" >
+      <img class="card-img-top" src="{{selected.imageURL}}" alt="Card image cap">
+      <div class="card-body">
+        <h3>{{selected.title}}</h3>
+        <h3>Written by: {{selected.authorName}}</h3>
+        <p class="card-title">You rated: {{selected.rating}} Stars</p>
+        <a *ngIf="selected.recommended == true">
+          <p>You: would recommend to a friend!</p>
+        </a>
+        <a *ngIf="selected.recommended == !true">
+          <p>You: would not recommend to a friend!</p>
+        </a>
+        <h3>Book Details</h3>
+        <p>{{selected.length}}</p>
+        <p>{{selected.format}}</p>
+        <p>{{selected.genre}}</p>
+
+        <button id = "submitBut" class="btn btn-primary" (click)="display=!display">Update Review?</button>
+      </div>
+    </div>
+
+
+    <div *ngIf = "display" id="updateDiv">
+      <div class="card" >
+        <div class="card-body">
+          <form>
+            <input type="text" name="title" [(ngModel)]="selected.title">
+            <input type="text" name="authorName" [(ngModel)]="selected.authorName">
+
+            <textarea rows="3" name ="comments" [(ngModel)]="selected.comments"></textarea>
+            <input type="number" name="rating" [(ngModel)]="selected.rating">
+            <input type="text" name="length" [(ngModel)]="selected.length">
+          </form>
+
+
+
+          <button id = "submitBut" class="btn btn-primary" (click)="updateBook(selected)">Save Changes</button>
+          <button id = "submitBut" class="btn btn-primary" (click)="deleteBook(selected.id)" >Delete?</button>
+        </div>
+      </div>
+
+      <br>
+      <br>
+      <br>
+    </div>
+  </div>
+
+</body>
