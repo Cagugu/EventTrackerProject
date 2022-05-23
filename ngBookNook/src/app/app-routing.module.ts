@@ -6,10 +6,10 @@ import { ReviewComponent } from './components/review/review.component';
 import { SingleBookComponent } from './components/single-book/single-book.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'review', component: ReviewComponent },
   { path: 'mybookshelf', component: BookshelfComponent },
-  { path: 'singleBook/:id', component: SingleBookComponent }
+  { path: 'review', component: ReviewComponent },
+  { path: 'singleBook/:id', component: SingleBookComponent },
+  { path: 'home', component: HomeComponent }
 ];
 
 @NgModule({

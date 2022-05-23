@@ -70,8 +70,9 @@ export class SingleBookComponent implements OnInit {
       data => this.reload(),
       err => console.log(err)
     );
-    this.reload();
+
     this.selected = null;
+
     this.router.navigateByUrl('/mybookshelf');
   }
 

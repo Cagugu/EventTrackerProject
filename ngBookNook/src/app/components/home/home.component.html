@@ -1,24 +1,31 @@
+<body id = 'background'>
+
+  <div class = "wrapper">
 
 
-<div class="container">
+    <div class = "container">
+      <h3>Want to search for a review?</h3>
+      <input type="text" id="search" [(ngModel)]="searchValue"  />
+      <table class="table">
+        <thead>
+          <tr class = table-header>
+            <th>Title:</th>
+            <th>Author:</th>
+            <th>Genre:</th>
+            <th>Rating:</th>
+          </tr>
+        </thead>
+        <tr class = "table-row" *ngFor="let book of books | tableFilter: searchValue">
+          <td>{{ book.title }}</td>
+          <td>{{ book.authorName }}</td>
+          <td>{{ book.genre }}</td>
+          <td>{{ book.rating }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div>
 
-  <div class = "main">
-  <!-- background will live here -->
-  <h1>Home Works</h1>
-
-</div> -->
-
-
-
-<input type="text" id="myInput" [(ngModel)]="filter" placeholder="Search for names.." >
-
-<table>
-<tr *ngFor="let book of books | tableFilter: filter "></tr>
-  <td>{{book.title}}</td>
-  <td>{{book.authorName}}</td>
-  <td>{{book.genre}}</td>
-  <td>{{book.rating}}</td>
-</table>
-
-
-</div>
+    <img src="background.jpg">
+  </div>
+</body>

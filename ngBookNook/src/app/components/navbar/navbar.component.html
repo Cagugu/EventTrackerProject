@@ -1,6 +1,6 @@
 <header class="header">
   <nav class="navbar">
-      <a [routerLink]="['/home']" class="nav-logo">Book Nook</a>
+      <a (click)="click()" [routerLink]="['/home']" class="nav-logo">Book Nook</a>
       <ul class="nav-menu">
           <li class="nav-item">
               <a [routerLink]="['/review']" class="nav-link">New Review</a>
@@ -8,12 +8,8 @@
           <li class="nav-item">
               <a [routerLink]="['/mybookshelf']" class="nav-link">My Bookshelf</a>
           </li>
-          <li class="nav-item">
-              <a href="#" class="nav-link">Find A Book</a>
-          </li>
-          <li class="nav-item">
-              <a href="#" class="nav-link">Search By Author</a>
-          </li>
+
+
       </ul>
       <!-- <div class="hamburger">
           <span class="bar"></span>

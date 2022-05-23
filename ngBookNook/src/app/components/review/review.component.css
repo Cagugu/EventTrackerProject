@@ -63,7 +63,7 @@ body, div, select, p {
   margin: 10px 0;
   }
 
-  input[type="checkbox"] {
+  input[type="radio"] {
     display: inline;
     max-width: 20px;
     padding: 8px;

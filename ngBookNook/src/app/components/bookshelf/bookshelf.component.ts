@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { BookNookService } from './../../services/book-nook.service';
 import { ReviewComponent } from './../review/review.component';
 import { Component, OnInit } from '@angular/core';
@@ -16,9 +17,10 @@ book: Book = new Book();
 editBook: Book = new Book();
 selected: Book | null = null;
 
-  constructor(private bookSvc: BookNookService) { }
+  constructor(private bookSvc: BookNookService, private router: Router) { }
 
   ngOnInit(): void {
+    this.books = [];
     this.reload();
   }
 
@@ -27,10 +29,12 @@ selected: Book | null = null;
   }
 
 reload() {
+  this.books = [];
   this.bookSvc.index().subscribe(
     data => this.books = data,
     err => console.log(err)
   );
+
 }
 
 

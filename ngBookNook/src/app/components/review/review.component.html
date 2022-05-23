@@ -34,9 +34,9 @@
           <div class="multi-item">
             <label class="form-labels" for="recommended">Do you recommended?</label>
             <label for="yesCheckbock">Yes</label>
-            <input type="checkbox" id="yesCheckbox" name = "recommendedTrue" value="True" [(ngModel)]="newBook.recommended"/>
+            <input type="radio" id="yesCheckbox" name = "recommendedTrue" value="True" [(ngModel)]="newBook.recommended"/>
             <label for="noCheckbock">No</label>
-            <!-- <input type="checkbox" id = "noCheckbox" name = "recommendedFalse" value="False" [(ngModel)]="newBook.recommended" /> -->
+           <input type="radio" id = "noCheckbox" name = "recommendedFalse" value="False" [(ngModel)]="newBook.recommended" />
 
             <Label class="form-labels" for="genre">Genre:</Label>
             <input name = "genre" type="text" placeholder="Romance, Comedy, Fantasy..." [(ngModel)]="newBook.genre"/>

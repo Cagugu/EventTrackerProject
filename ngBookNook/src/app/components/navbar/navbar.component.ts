@@ -16,7 +16,7 @@ export class NavbarComponent implements OnInit {
 
 
   click() {
-
+this.router.navigateByUrl('home');
   }
 
 }

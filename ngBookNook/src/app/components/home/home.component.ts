@@ -12,9 +12,9 @@ export class HomeComponent implements OnInit {
   books: Book[] = [];
   book: Book = new Book();
   selected: Book | null = null;
-  filter: string = "";
+  searchValue: string = "";
 
-  constructor(private bookSvc: BookNookService, private filterPipe: TableFilterPipe) {}
+  constructor(private bookSvc: BookNookService) {}
 
   ngOnInit(): void {
     this.reload();
@@ -28,6 +28,7 @@ export class HomeComponent implements OnInit {
     this.bookSvc.index().subscribe(
       (data) => (this.books = data),
       (err) => console.log(err)
-    );
+      );
+      console.log(this.books);
   }
 }

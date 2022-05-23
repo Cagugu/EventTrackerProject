@@ -6,8 +6,16 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class TableFilterPipe implements PipeTransform {
 
-  transform(list: Book[], value: string) {
-    return value ? list.filter(book => book.title === value || book.genre === value) : list;
-  }
+transform(books: Book[], searchValue: string): Book[] {
+
+if(!books || !searchValue) {
+  return books;
+}
+return books.filter(book => book.title.toLocaleUpperCase().includes(searchValue.toLocaleUpperCase())
+|| book.authorName.toLocaleUpperCase().includes(searchValue.toLocaleUpperCase()) ||
+book.genre.toLocaleUpperCase().includes(searchValue.toLocaleUpperCase()));
+
+}
+
 
 }
