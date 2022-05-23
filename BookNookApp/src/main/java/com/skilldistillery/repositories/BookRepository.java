@@ -9,7 +9,7 @@ import com.skilldistillery.entities.Book;
 public interface BookRepository extends JpaRepository<Book, Integer> {
 
 	//REPO IS FOR QUERIES
-	List<Book> findByTitleLikeOrDescriptionLike(String keyword1, String keyword2);
+	List<Book> findByTitleLikeOrGenreLike(String keyword1, String keyword2);
 	List<Book> findByAuthorNameLike(String keyword);
 	Book findById(int id);
 }

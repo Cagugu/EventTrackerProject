@@ -30,9 +30,9 @@ public class BookServiceImpl implements BookService {
 	}
 
 	@Override
-	public List<Book> findByTitleOrDescription(String keyword) {
+	public List<Book> findByTitleOrGenre(String keyword) {
 		keyword = "%" + keyword + "%";
-		return bookRepo.findByTitleLikeOrDescriptionLike(keyword, keyword);
+		return bookRepo.findByTitleLikeOrGenreLike(keyword, keyword);
 	}
 	
 	

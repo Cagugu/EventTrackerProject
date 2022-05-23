@@ -5,6 +5,7 @@ import java.util.List;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,6 +20,7 @@ import com.skilldistillery.services.BookService;
 
 @RestController
 @RequestMapping("api")
+@CrossOrigin({ "*", "http://localhost:4202" })
 public class BookController {
 
 	@Autowired
@@ -36,7 +38,7 @@ public class BookController {
 	
 	@GetMapping("books/search/{keyword}")
 	public List<Book> findByKeyword(@PathVariable String keyword, HttpServletResponse resp) {
-		List<Book> matchKeyword = bookServ.findByTitleOrDescription(keyword);
+		List<Book> matchKeyword = bookServ.findByTitleOrGenre(keyword);
 		matchKeyword.addAll(bookServ.findByAuthorName(keyword));
 		if(matchKeyword.size() > 0) {
 			resp.setStatus(200);

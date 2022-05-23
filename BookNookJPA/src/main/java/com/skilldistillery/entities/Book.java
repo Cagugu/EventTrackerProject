@@ -20,7 +20,7 @@ public class Book {
 	@Column(name="author_name")
 	private String authorName;
 
-	private String description;
+	private String comments;
 	
 	private String length;
 	
@@ -153,16 +153,15 @@ public class Book {
 		this.timeToRead = timeToRead;
 	}
 	
-	
 
-	public String getDescription() {
-		return description;
+	public String getComments() {
+		return comments;
 	}
 
 
 
-	public void setDescription(String description) {
-		this.description = description;
+	public void setComments(String comments) {
+		this.comments = comments;
 	}
 
 

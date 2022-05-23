@@ -5,9 +5,9 @@
 The Event Tracker is a simple REST API starter project. It is the foundation for what will be, the Book Nook Application. Book Nook will be a full-scale web application and will rely on the foundation for CRUD operations that are found within this event tracker project.  
 
 ## How It Works
-This program was developed in Spring Tools Suite and tested using Postman. It's functionality includes the option to search for a full list of books using a GET mapping of: (http://localhost:8086/api/books). The search funciton can also be narrowed according to books by author name, description, title, and book id. The id search uses a GET mapping of http://localhost:8086/api/books/{id}, and the others are found using http://localhost:8086/api/books/search/{keyword}. To provide full CRUD operations, there are also options to add a new book, delete an existing book(by id), and update a book(by id). To add a book the POST mapping is http://localhost:8086/api/books. To delete, a DELETE mapping of http://localhost:8086/api/books/{id}. And finally, to update, a PUT mapping of http://localhost:8086/api/books/{id}.
+This program was developed in Spring Tools Suite and tested using Postman.
 
-There is a basic front-end implemented to facilitate CRUD operations. CRUD operations are conducted using XMLHttpRequests(XHR).The index.html hosts only a small portion of the front end. Much of what the user is presented as they work through CRUD operations is dynamically created/ altered with DOM Manipulation using JavaScript.
+There is a basic front-end implemented to facilitate CRUD operations. CRUD operations are facilitated using Angular and Typescript. The front end is built using HTML and Typescript to offer a seamless and easy to use user interface.
 
 
 
@@ -24,6 +24,7 @@ There is a basic front-end implemented to facilitate CRUD operations. CRUD opera
 -  Google
 -  Spring Tool Suite 4
 -  Gradle
+-  Angular
 -  Object-Oriented Programming
 -  Test Driven Development using Postman
 - XMLHttpRequests

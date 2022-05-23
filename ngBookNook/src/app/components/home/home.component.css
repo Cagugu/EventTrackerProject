@@ -9,6 +9,8 @@
   letter-spacing: 0.03em;
 }
 .container{
+  width: 100%;
+
   background-image: url('background.jpg');
   padding-top: 60px;
 }
